@@ -1,0 +1,2 @@
+
+const CACHE_NAME='viper-birthday-app-v2';const urlsToCache=['/','/index.html','/manifest.json','https://i.ibb.co/tPQsJvmn/Screenshot-2025-06-09-09-45-54-244.jpg','https://i.ibb.co/BKPCRxpY/Screenshot-2025-05-27-09-13-48-743.jpg','https://i.ibb.co/Cp0XQN3f/Screenshot-2025-06-06-09-50-15-379.jpg'];self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE_NAME).then(c=>c.addAll(urlsToCache)))});self.addEventListener('fetch',e=>{e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request)))})
